@@ -3,7 +3,7 @@ import argparse
 from urllib.parse import urlparse
 import os
 from dotenv import load_dotenv
-load_dotenv()
+
 
 
 def shorten_url(url, token):
@@ -39,6 +39,7 @@ def count_clicks(bitlink, token):
 
 
 if __name__ == '__main__':
+    load_dotenv()
 
     parser = argparse.ArgumentParser(description='Ввод значений')
     parser.add_argument('link', help='Ссылка, с которой вы работаете')
